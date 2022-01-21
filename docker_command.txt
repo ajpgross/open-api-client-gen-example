@@ -1,0 +1,1 @@
+docker run --rm -v ${PWD}:/local openapitools/openapi-generator-cli:v5.1.1 generate -i https://petstore3.swagger.io/api/v3/openapi.json -g typescript-angular -o local/out --additional-properties=npmName=@ajpgross/petstore-client --additional-properties=npmVersion=1.0.0 --additional-properties=withInterfaces=true

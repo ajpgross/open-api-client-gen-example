@@ -1,0 +1,42 @@
+<div *ngIf="availablePets && soldPets" class="row mt-4 container text-center">
+    <div class="col">
+        <ul ngbNav #nav="ngbNav" [activeId]="route.fragment | async" class="nav-tabs">
+            <li ngbNavItem="available">
+                <a ngbNavLink routerLink="." fragment="available">Available Pets</a>
+                <ng-template ngbNavContent>
+                    <ng-container *ngTemplateOutlet="table; context: {$implicit: availablePets}"></ng-container>
+                </ng-template>
+            </li>
+            <li ngbNavItem="sold">
+                <a ngbNavLink routerLink="." fragment="sold">Sold Pets</a>
+                <ng-template ngbNavContent>
+                    <ng-container *ngTemplateOutlet="table; context: {$implicit: soldPets}"></ng-container>
+                </ng-template>
+            </li>
+        </ul>
+        <div [ngbNavOutlet]="nav"></div>
+    </div>
+</div>
+
+<ng-template #table let-pets>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pet of pets; index as i">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>
+                    {{ pet.name | slice:0:20 }}
+                </td>
+                <td>{{ pet.category?.name | slice:0:20 }}</td>
+                <td>{{ pet.status }}</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>

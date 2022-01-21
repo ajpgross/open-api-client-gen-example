@@ -1,0 +1,38 @@
+{
+  "name": "@ajpgross/petstore-client",
+  "version": "1.0.0",
+  "description": "OpenAPI client for @ajpgross/petstore-client",
+  "author": "OpenAPI-Generator Contributors",
+  "keywords": [
+    "openapi-client",
+    "openapi-generator"
+  ],
+  "license": "Unlicense",
+  "peerDependencies": {
+    "@angular/core": "^11.0.0",
+    "rxjs": "^6.6.0"
+  },
+  "main": "bundles/ajpgross-petstore-client.umd.js",
+  "module_ivy_ngcc": "__ivy_ngcc__/fesm2015/ajpgross-petstore-client.js",
+  "module": "fesm2015/ajpgross-petstore-client.js",
+  "es2015_ivy_ngcc": "__ivy_ngcc__/fesm2015/ajpgross-petstore-client.js",
+  "es2015": "fesm2015/ajpgross-petstore-client.js",
+  "esm2015": "esm2015/ajpgross-petstore-client.js",
+  "fesm2015_ivy_ngcc": "__ivy_ngcc__/fesm2015/ajpgross-petstore-client.js",
+  "fesm2015": "fesm2015/ajpgross-petstore-client.js",
+  "typings": "ajpgross-petstore-client.d.ts",
+  "metadata": "ajpgross-petstore-client.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "__processed_by_ivy_ngcc__": {
+    "es2015": "13.1.3",
+    "fesm2015": "13.1.3",
+    "module": "13.1.3",
+    "typings": "13.1.3"
+  },
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by NGCC. This is not allowed.\\nPlease delete and rebuild the package, without compiling with NGCC, before attempting to publish.\\nNote that NGCC may have been run by importing this package into another project that is being built with Ivy enabled.\\n')\" && exit 1"
+  }
+}
